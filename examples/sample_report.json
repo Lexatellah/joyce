@@ -1,0 +1,27 @@
+﻿{
+  "project": "my-saas-app",
+  "score": 42,
+  "findings": [
+    {
+      "rule": "secrets/api_keys",
+      "severity": "CRITICAL",
+      "file": "src/config.js",
+      "line": 14,
+      "message": "OpenAI-style key hardcoded in source"
+    },
+    {
+      "rule": "env/committed",
+      "severity": "CRITICAL",
+      "file": ".env",
+      "line": 0,
+      "message": ".env is present in the repository - likely a leaked secret file"
+    },
+    {
+      "rule": "framework/misconfig",
+      "severity": "HIGH",
+      "file": "firebase.json",
+      "line": 0,
+      "message": "Firebase rules set to \"public\": true - database is world-readable"
+    }
+  ]
+}
